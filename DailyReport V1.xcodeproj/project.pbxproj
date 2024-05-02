@@ -37,6 +37,18 @@
 		E44DB3722BE400C200A72295 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3712BE400C200A72295 /* Constants.swift */; };
 		E44DB3742BE400F800A72295 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3732BE400F800A72295 /* AuthService.swift */; };
 		E44DB3762BE4013500A72295 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3752BE4013500A72295 /* UserService.swift */; };
+		E44DB3792BE417E300A72295 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3782BE417E300A72295 /* LoginView.swift */; };
+		E44DB37B2BE417EE00A72295 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB37A2BE417EE00A72295 /* RegistrationView.swift */; };
+		E44DB37D2BE4180100A72295 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB37C2BE4180100A72295 /* ResetPasswordView.swift */; };
+		E44DB37F2BE41B8B00A72295 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */; };
+		E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */; };
+		E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3822BE4356E00A72295 /* MainTabView.swift */; };
+		E44DB3852BE435CB00A72295 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3842BE435CB00A72295 /* HomeView.swift */; };
+		E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3862BE4363A00A72295 /* ProjectSetup.swift */; };
+		E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3882BE437B900A72295 /* SafetyView.swift */; };
+		E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38A2BE4386E00A72295 /* UserProfileView.swift */; };
+		E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */; };
+		E44DB38F2BE43BA300A72295 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +94,18 @@
 		E44DB3712BE400C200A72295 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E44DB3732BE400F800A72295 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E44DB3752BE4013500A72295 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E44DB3782BE417E300A72295 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E44DB37A2BE417EE00A72295 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		E44DB37C2BE4180100A72295 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		E44DB3822BE4356E00A72295 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E44DB3842BE435CB00A72295 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E44DB3862BE4363A00A72295 /* ProjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSetup.swift; sourceTree = "<group>"; };
+		E44DB3882BE437B900A72295 /* SafetyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyView.swift; sourceTree = "<group>"; };
+		E44DB38A2BE4386E00A72295 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +170,7 @@
 				E44DB3112BE3E34900A72295 /* DailyReport_V1App.swift */,
 				E44DB3132BE3E34900A72295 /* ContentView.swift */,
 				E44DB3152BE3E34D00A72295 /* Assets.xcassets */,
+				E44DB3772BE417C000A72295 /* Authentications */,
 				E44DB35A2BE3F98800A72295 /* Components */,
 				E44DB35B2BE3F99300A72295 /* Extensions */,
 				E44DB3592BE3F97600A72295 /* Model */,
@@ -194,6 +219,10 @@
 		E44DB3552BE3F6A800A72295 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */,
+				E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */,
+				E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */,
+				E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,6 +230,11 @@
 		E44DB3562BE3F6CC00A72295 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E44DB3842BE435CB00A72295 /* HomeView.swift */,
+				E44DB3822BE4356E00A72295 /* MainTabView.swift */,
+				E44DB3862BE4363A00A72295 /* ProjectSetup.swift */,
+				E44DB3882BE437B900A72295 /* SafetyView.swift */,
+				E44DB38A2BE4386E00A72295 /* UserProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +285,16 @@
 				E44DB35C2BE3F9F300A72295 /* VisualEffectBlur.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E44DB3772BE417C000A72295 /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				E44DB3782BE417E300A72295 /* LoginView.swift */,
+				E44DB37A2BE417EE00A72295 /* RegistrationView.swift */,
+				E44DB37C2BE4180100A72295 /* ResetPasswordView.swift */,
+			);
+			path = Authentications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,17 +447,29 @@
 				E44DB3702BE3FFB300A72295 /* AnimationButton.swift in Sources */,
 				E44DB3642BE3FB0200A72295 /* DailySiteModel.swift in Sources */,
 				E44DB35F2BE3FA3900A72295 /* TextFrameViewModifier.swift in Sources */,
+				E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */,
+				E44DB37D2BE4180100A72295 /* ResetPasswordView.swift in Sources */,
 				E44DB36A2BE3FD3200A72295 /* CustomTextFieldButton.swift in Sources */,
+				E44DB3852BE435CB00A72295 /* HomeView.swift in Sources */,
+				E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */,
+				E44DB38F2BE43BA300A72295 /* CurrentUserProfileViewModel.swift in Sources */,
 				E44DB3662BE3FB7700A72295 /* ProjectModel.swift in Sources */,
+				E44DB37B2BE417EE00A72295 /* RegistrationView.swift in Sources */,
 				E44DB35D2BE3F9F300A72295 /* VisualEffectBlur.swift in Sources */,
 				E44DB3142BE3E34900A72295 /* ContentView.swift in Sources */,
 				E44DB3722BE400C200A72295 /* Constants.swift in Sources */,
+				E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */,
+				E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */,
 				E44DB36E2BE3FEEA00A72295 /* ProjectMenuRow.swift in Sources */,
+				E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */,
 				E44DB3622BE3FAA000A72295 /* UserModel.swift in Sources */,
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
 				E44DB3762BE4013500A72295 /* UserService.swift in Sources */,
+				E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */,
 				E44DB3122BE3E34900A72295 /* DailyReport_V1App.swift in Sources */,
 				E44DB3682BE3FC0700A72295 /* CircularProfileImageView.swift in Sources */,
+				E44DB3792BE417E300A72295 /* LoginView.swift in Sources */,
+				E44DB37F2BE41B8B00A72295 /* LoginViewModel.swift in Sources */,
 				E44DB3742BE400F800A72295 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

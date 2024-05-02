@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("log_Status") var log_Status: Bool = true
+    @StateObject var viewModel = ContentViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+//        Group {
+//            if viewModel.userSession != nil {
+//                MainTabView()
+//            } else {
+//                LoginView().environmentObject(ContentViewModel())
+//            }
+//        }
+        
+        Group {
+            if viewModel.userSession != nil {
+                MainTabView()
+            } else if log_Status {
+                MainTabView()
+            } else {
+                LoginView().environmentObject(ContentViewModel())
+            }
         }
-        .padding()
     }
 }
 

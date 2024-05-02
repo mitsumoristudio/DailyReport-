@@ -34,13 +34,13 @@ final class AuthService {
         }
     }
     
-    func createNewUser(withEmail email: String, password: String, fullname: String, username: String) async throws {
+    func createNewUser(withEmail email: String, password: String, username: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             
             self.userSession = result.user // Sign in as User
             
-            try await uploadUserData(withEmail: email, uid: result.user.uid, fullname: fullname, username: username) // setup after user authentication to make sure tht the documentID corresponds to userID
+            try await uploadUserData(withEmail: email, uid: result.user.uid, username: username) // setup after user authentication to make sure tht the documentID corresponds to userID
             
             
             print("Debug: Create user \(result.user.uid)")
@@ -69,7 +69,7 @@ final class AuthService {
     }
     
     @MainActor
-    private func uploadUserData(withEmail email: String, uid: String, fullname: String, username: String) async throws {
+    private func uploadUserData(withEmail email: String, uid: String, username: String) async throws {
         let user = UserModel(email: email, uid: uid, username: username)
         guard let userData = try? Firestore.Encoder().encode(user) else { return }
         try await COLLECTION_USER.document(uid).setData(userData)
