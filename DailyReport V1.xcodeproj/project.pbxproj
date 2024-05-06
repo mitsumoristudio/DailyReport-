@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4083E7A2BE926BA004CEBE9 /* FeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E792BE926BA004CEBE9 /* FeedCellView.swift */; };
+		E4083E7C2BE928F3004CEBE9 /* DevelopPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E7B2BE928F3004CEBE9 /* DevelopPreview.swift */; };
+		E4083E7E2BE92ADC004CEBE9 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E7D2BE92ADC004CEBE9 /* FeedView.swift */; };
+		E4083E802BE92BE3004CEBE9 /* ProjectDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */; };
+		E4083E822BE931FC004CEBE9 /* GradientIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E812BE931FC004CEBE9 /* GradientIconButton.swift */; };
+		E4083E842BE93A9E004CEBE9 /* DailyReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E832BE93A9E004CEBE9 /* DailyReportCell.swift */; };
+		E4083E862BE93C0D004CEBE9 /* DailyReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */; };
+		E4083E882BE93F01004CEBE9 /* DailyReportSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */; };
+		E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */; };
+		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
+		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
+		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
 		E44DB3122BE3E34900A72295 /* DailyReport_V1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3112BE3E34900A72295 /* DailyReport_V1App.swift */; };
 		E44DB3142BE3E34900A72295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3132BE3E34900A72295 /* ContentView.swift */; };
 		E44DB3162BE3E34D00A72295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44DB3152BE3E34D00A72295 /* Assets.xcassets */; };
@@ -43,7 +55,6 @@
 		E44DB37F2BE41B8B00A72295 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */; };
 		E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */; };
 		E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3822BE4356E00A72295 /* MainTabView.swift */; };
-		E44DB3852BE435CB00A72295 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3842BE435CB00A72295 /* HomeView.swift */; };
 		E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3862BE4363A00A72295 /* ProjectSetup.swift */; };
 		E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3882BE437B900A72295 /* SafetyView.swift */; };
 		E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38A2BE4386E00A72295 /* UserProfileView.swift */; };
@@ -69,6 +80,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4083E792BE926BA004CEBE9 /* FeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellView.swift; sourceTree = "<group>"; };
+		E4083E7B2BE928F3004CEBE9 /* DevelopPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopPreview.swift; sourceTree = "<group>"; };
+		E4083E7D2BE92ADC004CEBE9 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailCell.swift; sourceTree = "<group>"; };
+		E4083E812BE931FC004CEBE9 /* GradientIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientIconButton.swift; sourceTree = "<group>"; };
+		E4083E832BE93A9E004CEBE9 /* DailyReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportCell.swift; sourceTree = "<group>"; };
+		E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportCard.swift; sourceTree = "<group>"; };
+		E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportSetUp.swift; sourceTree = "<group>"; };
+		E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportViewModel.swift; sourceTree = "<group>"; };
+		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
+		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
 		E44DB30E2BE3E34900A72295 /* DailyReport V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyReport V1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44DB3112BE3E34900A72295 /* DailyReport_V1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReport_V1App.swift; sourceTree = "<group>"; };
 		E44DB3132BE3E34900A72295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,7 +123,6 @@
 		E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E44DB3822BE4356E00A72295 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		E44DB3842BE435CB00A72295 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E44DB3862BE4363A00A72295 /* ProjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSetup.swift; sourceTree = "<group>"; };
 		E44DB3882BE437B900A72295 /* SafetyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyView.swift; sourceTree = "<group>"; };
 		E44DB38A2BE4386E00A72295 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -167,9 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				E44DB3602BE3FA7700A72295 /* DailyReport-V1-Info.plist */,
-				E44DB3112BE3E34900A72295 /* DailyReport_V1App.swift */,
 				E44DB3132BE3E34900A72295 /* ContentView.swift */,
-				E44DB3152BE3E34D00A72295 /* Assets.xcassets */,
+				E44DB3112BE3E34900A72295 /* DailyReport_V1App.swift */,
 				E44DB3772BE417C000A72295 /* Authentications */,
 				E44DB35A2BE3F98800A72295 /* Components */,
 				E44DB35B2BE3F99300A72295 /* Extensions */,
@@ -179,6 +200,7 @@
 				E44DB3562BE3F6CC00A72295 /* Views */,
 				E44DB3552BE3F6A800A72295 /* ViewModel */,
 				E44DB3532BE3F59F00A72295 /* GoogleService-Info.plist */,
+				E44DB3152BE3E34D00A72295 /* Assets.xcassets */,
 				E44DB3172BE3E34D00A72295 /* Preview Content */,
 			);
 			path = "DailyReport V1";
@@ -219,9 +241,11 @@
 		E44DB3552BE3F6A800A72295 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */,
 				E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */,
 				E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */,
+				E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */,
+				E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */,
+				E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */,
 				E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
@@ -230,9 +254,14 @@
 		E44DB3562BE3F6CC00A72295 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E44DB3842BE435CB00A72295 /* HomeView.swift */,
+				E4083E832BE93A9E004CEBE9 /* DailyReportCell.swift */,
+				E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */,
+				E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */,
+				E4083E792BE926BA004CEBE9 /* FeedCellView.swift */,
+				E4083E7D2BE92ADC004CEBE9 /* FeedView.swift */,
 				E44DB3822BE4356E00A72295 /* MainTabView.swift */,
 				E44DB3862BE4363A00A72295 /* ProjectSetup.swift */,
+				E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */,
 				E44DB3882BE437B900A72295 /* SafetyView.swift */,
 				E44DB38A2BE4386E00A72295 /* UserProfileView.swift */,
 			);
@@ -243,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				E44DB3732BE400F800A72295 /* AuthService.swift */,
+				E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */,
 				E44DB3752BE4013500A72295 /* UserService.swift */,
 			);
 			path = Service;
@@ -251,6 +281,7 @@
 		E44DB3582BE3F6F700A72295 /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				E4083E7B2BE928F3004CEBE9 /* DevelopPreview.swift */,
 			);
 			path = Systems;
 			sourceTree = "<group>";
@@ -259,8 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				E44DB3632BE3FB0200A72295 /* DailySiteModel.swift */,
-				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
 				E44DB3652BE3FB7700A72295 /* ProjectModel.swift */,
+				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +301,7 @@
 			children = (
 				E44DB3672BE3FC0700A72295 /* CircularProfileImageView.swift */,
 				E44DB3712BE400C200A72295 /* Constants.swift */,
+				E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -277,8 +309,9 @@
 		E44DB35B2BE3F99300A72295 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E44DB3692BE3FD3200A72295 /* CustomTextFieldButton.swift */,
 				E44DB36F2BE3FFB300A72295 /* AnimationButton.swift */,
+				E44DB3692BE3FD3200A72295 /* CustomTextFieldButton.swift */,
+				E4083E812BE931FC004CEBE9 /* GradientIconButton.swift */,
 				E44DB36B2BE3FEA200A72295 /* ImagePicker.swift */,
 				E44DB36D2BE3FEEA00A72295 /* ProjectMenuRow.swift */,
 				E44DB35E2BE3FA3900A72295 /* TextFrameViewModifier.swift */,
@@ -444,30 +477,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4083E7C2BE928F3004CEBE9 /* DevelopPreview.swift in Sources */,
+				E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */,
 				E44DB3702BE3FFB300A72295 /* AnimationButton.swift in Sources */,
 				E44DB3642BE3FB0200A72295 /* DailySiteModel.swift in Sources */,
 				E44DB35F2BE3FA3900A72295 /* TextFrameViewModifier.swift in Sources */,
 				E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */,
 				E44DB37D2BE4180100A72295 /* ResetPasswordView.swift in Sources */,
+				E4083E7A2BE926BA004CEBE9 /* FeedCellView.swift in Sources */,
+				E4083E862BE93C0D004CEBE9 /* DailyReportCard.swift in Sources */,
 				E44DB36A2BE3FD3200A72295 /* CustomTextFieldButton.swift in Sources */,
-				E44DB3852BE435CB00A72295 /* HomeView.swift in Sources */,
+				E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */,
 				E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */,
 				E44DB38F2BE43BA300A72295 /* CurrentUserProfileViewModel.swift in Sources */,
 				E44DB3662BE3FB7700A72295 /* ProjectModel.swift in Sources */,
+				E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */,
 				E44DB37B2BE417EE00A72295 /* RegistrationView.swift in Sources */,
 				E44DB35D2BE3F9F300A72295 /* VisualEffectBlur.swift in Sources */,
 				E44DB3142BE3E34900A72295 /* ContentView.swift in Sources */,
 				E44DB3722BE400C200A72295 /* Constants.swift in Sources */,
 				E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */,
+				E4083E822BE931FC004CEBE9 /* GradientIconButton.swift in Sources */,
 				E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */,
 				E44DB36E2BE3FEEA00A72295 /* ProjectMenuRow.swift in Sources */,
 				E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */,
 				E44DB3622BE3FAA000A72295 /* UserModel.swift in Sources */,
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
+				E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */,
 				E44DB3762BE4013500A72295 /* UserService.swift in Sources */,
 				E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */,
 				E44DB3122BE3E34900A72295 /* DailyReport_V1App.swift in Sources */,
+				E4083E882BE93F01004CEBE9 /* DailyReportSetUp.swift in Sources */,
+				E4083E7E2BE92ADC004CEBE9 /* FeedView.swift in Sources */,
 				E44DB3682BE3FC0700A72295 /* CircularProfileImageView.swift in Sources */,
+				E4083E842BE93A9E004CEBE9 /* DailyReportCell.swift in Sources */,
+				E4083E802BE92BE3004CEBE9 /* ProjectDetailCell.swift in Sources */,
 				E44DB3792BE417E300A72295 /* LoginView.swift in Sources */,
 				E44DB37F2BE41B8B00A72295 /* LoginViewModel.swift in Sources */,
 				E44DB3742BE400F800A72295 /* AuthService.swift in Sources */,

@@ -15,7 +15,7 @@ struct MainTabView: View {
     var body: some View {
         VStack() {
             TabView(selection: $selectedTab) {
-                HomeView()
+               FeedView()
                     .tabItem {
                         VStack() {
                             Image(systemName: "house.fill")
@@ -53,7 +53,7 @@ struct MainTabView: View {
             .onChange(of: selectedTab) { oldValue, newValue in
                 showCreateTabview = selectedTab == 1
             }
-            .fullScreenCover(isPresented: $showCreateTabview, content: {
+            .sheet(isPresented: $showCreateTabview, content: {
                 ProjectSetup()
             })
         }
