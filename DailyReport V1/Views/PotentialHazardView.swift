@@ -11,6 +11,7 @@ import SwiftUI
 struct PotentialHazardView: View {
     @State var isCompleted: Bool = false
     @Environment(\.dismiss) var dismiss
+    @State var dateSelect: Date = Date()
     
     func checkboxmainrow(placeholder: PotentialHazardModel) -> some View {
         VStack() {
@@ -26,11 +27,46 @@ struct PotentialHazardView: View {
             }
         }
     }
+    
+    func TitleView(_ value: String, _ color: Color = .black.opacity(0.9)) -> some View {
+        Text(value)
+            .font(.system(size: 18))
+            .foregroundColor(color)
+            .fontWeight(.semibold)
+    }
 
     var body: some View {
         NavigationStack {
             
                 VStack(alignment: .leading, spacing: 5) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        TitleView("Date")
+                           
+                        
+                        HStack(alignment: .bottom, spacing: 20) {
+                            HStack(spacing: 12) {
+                                Text(dateSelect.toString("EEEE dd, MMMM"))
+                                    .font(.headline)
+                                
+                                Image(systemName: "calendar")
+                                    .font(.title3)
+                                    .foregroundColor(Color.gray)
+                                    .overlay {
+                                        DatePicker("", selection: $dateSelect, displayedComponents: [.date])
+                                            .blendMode(.destinationOver)
+                                    }
+                            }
+                            .offset(y: -5)
+                            .overlay(alignment: .bottom) {
+                                Rectangle()
+                                    .fill(.black.opacity(0.8))
+                                    .frame(height: 1)
+                                    .offset(y: 5)
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    
                     
                     List {
                         ForEach(hazardCollections, id: \.self) { items in
@@ -38,13 +74,14 @@ struct PotentialHazardView: View {
                     }
                 }
             
+            
             .navigationTitle("Potential Hazards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading, content: {
+            ToolbarItem(placement: .navigationBarTrailing, content: {
                 Button(action: {
                     dismiss()
                     
@@ -123,7 +160,15 @@ struct Buttonbox: View {
             CheckboxView(checked_mark: $check_mark, trimVal: $trimVal)
         }
     }
+}
+
+extension Date {
     
+    func toString(_ format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
 }
 
 

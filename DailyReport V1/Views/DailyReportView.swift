@@ -13,19 +13,29 @@ struct DailyReportView: View {
     @EnvironmentObject var viewmodel: DailyReportViewModel
     @Environment(\.dismiss) var dismiss
     @State private var searchText: String = ""
+    @State private var updatedTopics = [DailySiteModel]()
+    
+    var filterReportTopics: [DailySiteModel] {
+        guard !searchText.isEmpty else {
+            return viewmodel.dailyVM.sorted { $0.reportDate < $1.reportDate }
+        }
+        return viewmodel.dailyVM.filter { searchreport in
+            searchreport.reportDate.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     var body: some View {
         NavigationStack {
             VStack() {
                 List {
-                    ForEach(viewmodel.dailyVM, id: \.self) { items in
+                    ForEach(filterReportTopics, id: \.self) { items in
+                 //   ForEach(viewmodel.dailyVM, id: \.self) { items in
                      //   Text(items.siteActivity)
                         NavigationLink(destination: {
                             DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects))
                         }, label: {
                             DailyReportCell(dailyReport: items)
                         })
-                        
                         
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
@@ -40,42 +50,19 @@ struct DailyReportView: View {
                 }
                 .listStyle(.insetGrouped)
             }
+            .searchable(text: $searchText, prompt: "Search Report Info")
+            .onChange(of: searchText, { (searchTexts, _) in
+                
+                updatedTopics = viewmodel.dailyVM.filter({ reports in
+                    reports.reportDate.contains(searchTexts)
+                })
+            })
+            
             .onAppear {
                 viewmodel.fetchDailyReport()
             }
             .navigationBarBackButtonHidden(true)
         }
-        
-        
-        //        NavigationStack {
-        //            ScrollView {
-        //                LazyVStack(spacing: 0) {
-        //                    ForEach(viewmodel.dailyVM, id: \.self) { dailyReports in
-        //                        NavigationLink(destination: {
-        //                            DailyReportCard(dailyreports: dailyReports, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects))
-        //                        }, label: {
-        //                            DailyReportCell(dailyReport: dailyReports)
-        //                        })
-        //                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-        //                            Button(action: {
-        //                                viewmodel.deleteReport(reports: dailyReports)
-        //                            }, label: {
-        //                                Text("Delete")
-        //                            })
-        //                            .tint(.red)
-        //                        }
-        //                    }
-        //
-        //                    .padding()
-        //
-        //                    .navigationTitle("Daily Report")
-        //                    .navigationBarTitleDisplayMode(.inline)
-        //                    .navigationBarBackButtonHidden(true)
-        //
-        //
-        //                }
-        //            }
-        //        }
         
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading, content: {

@@ -54,9 +54,6 @@ final class DailyReportViewModel: ObservableObject {
         fetchDailyReport()
     }
     
- 
-    
-    
     func fetchDailyReport() {
         guard let projectID = projects.id else { return }
         

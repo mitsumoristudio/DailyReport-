@@ -43,10 +43,11 @@ struct DailyReportCell: View {
                     }
                 }
             }
-            .frame(width: 360, height: 80)
-                .background(.ultraThinMaterial)
+            .frame(width: 300, height: 80)
+            .background(.ultraThickMaterial)
                 .cornerRadius(10)
-                Divider()
+            
+           //     .padding()
             }
         }
     }

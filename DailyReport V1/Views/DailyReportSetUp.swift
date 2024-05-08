@@ -127,7 +127,7 @@ struct DailyReportSetUp: View {
                                     // MARK: Add button here
                                     HStack(spacing: 5) {
                                         Button(action: {
-                                            viewmodel.createDailyReport(reportDate: dateSelected, siteActivity: siteActivity, materialDelivered: materialDelivered, delaysEncountered: delayEncountered, image: selectImage, conversation: conversation, weatherequipmentdelay: materialDelivered)
+                                            viewmodel.createDailyReport(reportDate: dateSelected, siteActivity: siteActivity, materialDelivered: materialDelivered, delaysEncountered: delayEncountered, image: selectImage, conversation: conversation, weatherequipmentdelay: equipmentWeatherDelayEncountered)
                                             
                                             showAlertIcon = true
                                             

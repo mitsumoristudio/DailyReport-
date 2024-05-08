@@ -13,6 +13,7 @@ struct ProjectDetailCell: View {
     @State var projects: ProjectModel
     @Environment(\.dismiss) var dismiss
     @State var showSummary: Bool = false
+    @State var showReportSummary: Bool = false
     
     
     var body: some View {
@@ -39,26 +40,28 @@ struct ProjectDetailCell: View {
                     }
                     .padding()
                     
-                    Group {
-                        VStack(alignment: .leading, spacing: 5) {
-                            
-                            NavigationLink(destination: {
-                                // MARK: Add create Daily Report
-                                DailyReportSetUp(viewmodel: DailyReportViewModel(projects: projects), siteActivity: "Testing Sheet", materialDelivered: "27 cyds Cement", delayEncountered: "No delays encountered", equipmentWeatherDelayEncountered: "None", conversation: "Conversation with GC")
-                            }, label: {
-                                ProjectMenuRow(title: "Create Daily Report", leftIcon: "rectangle.inset.filled.and.person.filled")
-                            })
-                            .padding(.horizontal, 20)
-                        }
-                    }
+//                   Group {
+//                        VStack(alignment: .leading, spacing: 5) {
+//                            
+//                            NavigationLink(destination: {
+//                                // MARK: Add create Daily Report
+//                                DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
+//                            }, label: {
+//                                ProjectMenuRow(title: "Daily Report Summary", leftIcon: "rectangle.inset.filled.and.person.filled")
+//                            })
+//                            .padding(.horizontal, 20)
+//                        }
+//                    }
                     
                 }
                 
                 .sheet(isPresented: $showSummary, content: {
+                    DailyReportSetUp(viewmodel: DailyReportViewModel(projects: projects))
+          
+                })
+                .sheet(isPresented: $showReportSummary, content: {
                     DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
                 })
-//                .fullScreenCover(isPresented: $showSummary, content: {
-//                    DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
                 
             }
             .navigationBarBackButtonHidden(true)
@@ -80,6 +83,16 @@ struct ProjectDetailCell: View {
                         Image(systemName: "plus.circle.fill")
                             .foregroundColor(Color.black).opacity(1)
                             .font(.system(size: 28, design: .rounded))
+                    })
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        showReportSummary.toggle()
+                    }, label: {
+                        Image(systemName: "ellipsis.circle")
+                            .font(.system(size: 28, design: .rounded))
+                            .foregroundStyle(Color.black.opacity(0.8))
                     })
                 }
                 
