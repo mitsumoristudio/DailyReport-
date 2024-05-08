@@ -27,9 +27,24 @@ struct ChecklistView: View {
     @State var groutBurn: String = "N/A"
     @State var heatColdStress: String = "N/A"
     @State var heavyEquipment: String = "N/A"
+    @State var hotWork: String = "N/A"
+    @State var noise: String = "N/A"
+    @State var pinchPoint: String = "N/A"
+    @State var pressurizedLine = "N/A"
+    @State var rigging = "N/A"
+    @State var rotatatingEquipment = "N/A"
+    @State var sharpEdgies = "N/A"
+    @State var silica = "N/A"
+    @State var suspendedLoads = "N/A"
+    @State var slips = "N/A"
+    @State var undergroundUtilities = "N/A"
+    @State var vehicleSafety = "N/A"
+    @State var vibration: String = "N/A"
     
     
     var body: some View {
+        // MARK: List of all the check items in safety applicable topics
+        
         VStack() {
             List  {
                 VStack(alignment: .leading, spacing: 10) {
@@ -204,8 +219,7 @@ struct ChecklistView: View {
                     }
                     
                     Divider()
-                    
-                    
+                
                     HStack(spacing: 16) {
                         Text("Heavy Equipment/Tracking Equipment")
                             .fontWeight(.semibold)
@@ -220,8 +234,216 @@ struct ChecklistView: View {
                         .padding(.horizontal, 16)
                     }
                     
+                    Divider()
                     
+                    HStack(spacing: 16) {
+                        Text("Hot Work (welding & torching)")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $hotWork) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
                     
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Noise")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $noise) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Pinch Point")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $pinchPoint) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Pressurized Line")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $pressurizedLine) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Rigging")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $rigging) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Rotating Equipment")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $rotatatingEquipment) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Shart Edges & Impalement")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $sharpEdgies) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Silica & Asbestos")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $silica) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Slip & Trip Hazards")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $slips) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Suspended Loads")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $suspendedLoads) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Underground Utilities")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $undergroundUtilities) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Vehicle Safety & Traffic")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $vehicleSafety) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+                    
+                    HStack(spacing: 16) {
+                        Text("Vibration")
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Picker("", selection: $vibration) {
+                            ForEach(yesnoArray, id: \.self) { items in
+                                Text(items)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.horizontal, 16)
+                    }
+                    
+                    Divider()
+   
                 }
             }
         }

@@ -25,6 +25,7 @@
 		E4083EE82BEBE284004CEBE9 /* SafetyTopicEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EE72BEBE284004CEBE9 /* SafetyTopicEnum.swift */; };
 		E4083EEA2BEBF5B5004CEBE9 /* SafetyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */; };
 		E4083EEC2BEC0ECC004CEBE9 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EEB2BEC0ECC004CEBE9 /* ChecklistView.swift */; };
+		E4083EEE2BEC1B65004CEBE9 /* DailySafetyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */; };
 		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
 		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
 		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
@@ -107,6 +108,7 @@
 		E4083EE72BEBE284004CEBE9 /* SafetyTopicEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTopicEnum.swift; sourceTree = "<group>"; };
 		E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListView.swift; sourceTree = "<group>"; };
 		E4083EEB2BEC0ECC004CEBE9 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
+		E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySafetyModel.swift; sourceTree = "<group>"; };
 		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
 		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				E44DB3652BE3FB7700A72295 /* ProjectModel.swift */,
 				E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */,
 				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
+				E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */,
 				E4083E8D2BE98CEB004CEBE9 /* SafetyModel.swift */,
 			);
 			path = Model;
@@ -537,6 +540,7 @@
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
 				E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */,
 				E44DB3762BE4013500A72295 /* UserService.swift in Sources */,
+				E4083EEE2BEC1B65004CEBE9 /* DailySafetyModel.swift in Sources */,
 				E44DB3892BE437B900A72295 /* PotentialHazardViewModel.swift in Sources */,
 				E44DB3122BE3E34900A72295 /* DailyReport_V1App.swift in Sources */,
 				E4083E882BE93F01004CEBE9 /* DailyReportSetUp.swift in Sources */,
