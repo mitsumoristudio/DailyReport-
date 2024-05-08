@@ -20,4 +20,5 @@ struct DailySiteModel: Identifiable, Codable, Hashable {
     var ownerUid: String
     var imageUrlString: String?
     var conversation: String?
+    var documentID: String?
 }

@@ -11,11 +11,13 @@ import SwiftUI
 struct MainTabView: View {
     @State var selectedTab = 0
     @State private var showCreateTabview: Bool = false
+    @State var devpreview = DevelopPreview()
     
     var body: some View {
         VStack() {
             TabView(selection: $selectedTab) {
                FeedView()
+                    .environmentObject(ProjectViewModel())
                     .tabItem {
                         VStack() {
                             Image(systemName: "house.fill")
@@ -33,7 +35,7 @@ struct MainTabView: View {
                     }
                     .tag(1)
                 
-                SafetyView()
+                InsiteSafetyView(insiteSafety: devpreview.mockSafety)
                     .tabItem {
                         VStack() {
                             Image(systemName: "cross.vial")

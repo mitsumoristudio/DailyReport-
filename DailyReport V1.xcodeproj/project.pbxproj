@@ -16,6 +16,12 @@
 		E4083E862BE93C0D004CEBE9 /* DailyReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */; };
 		E4083E882BE93F01004CEBE9 /* DailyReportSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */; };
 		E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */; };
+		E4083E8C2BE98859004CEBE9 /* DailyReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E8B2BE98859004CEBE9 /* DailyReportView.swift */; };
+		E4083E8E2BE98CEB004CEBE9 /* SafetyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E8D2BE98CEB004CEBE9 /* SafetyModel.swift */; };
+		E4083E902BE98DBA004CEBE9 /* InsiteSafetyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E8F2BE98DBA004CEBE9 /* InsiteSafetyView.swift */; };
+		E4083E922BE9914D004CEBE9 /* HazardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E912BE9914D004CEBE9 /* HazardDetailView.swift */; };
+		E4083E942BEA8BEA004CEBE9 /* PotentialHazardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */; };
+		E4083E962BEA90B8004CEBE9 /* PotentialHazardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083E952BEA90B8004CEBE9 /* PotentialHazardView.swift */; };
 		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
 		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
 		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
@@ -56,7 +62,7 @@
 		E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */; };
 		E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3822BE4356E00A72295 /* MainTabView.swift */; };
 		E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3862BE4363A00A72295 /* ProjectSetup.swift */; };
-		E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3882BE437B900A72295 /* SafetyView.swift */; };
+		E44DB3892BE437B900A72295 /* PotentialHazardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB3882BE437B900A72295 /* PotentialHazardViewModel.swift */; };
 		E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38A2BE4386E00A72295 /* UserProfileView.swift */; };
 		E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */; };
 		E44DB38F2BE43BA300A72295 /* CurrentUserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */; };
@@ -89,6 +95,12 @@
 		E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportCard.swift; sourceTree = "<group>"; };
 		E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportSetUp.swift; sourceTree = "<group>"; };
 		E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportViewModel.swift; sourceTree = "<group>"; };
+		E4083E8B2BE98859004CEBE9 /* DailyReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportView.swift; sourceTree = "<group>"; };
+		E4083E8D2BE98CEB004CEBE9 /* SafetyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyModel.swift; sourceTree = "<group>"; };
+		E4083E8F2BE98DBA004CEBE9 /* InsiteSafetyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiteSafetyView.swift; sourceTree = "<group>"; };
+		E4083E912BE9914D004CEBE9 /* HazardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazardDetailView.swift; sourceTree = "<group>"; };
+		E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialHazardModel.swift; sourceTree = "<group>"; };
+		E4083E952BEA90B8004CEBE9 /* PotentialHazardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialHazardView.swift; sourceTree = "<group>"; };
 		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
 		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -124,7 +136,7 @@
 		E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E44DB3822BE4356E00A72295 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E44DB3862BE4363A00A72295 /* ProjectSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSetup.swift; sourceTree = "<group>"; };
-		E44DB3882BE437B900A72295 /* SafetyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyView.swift; sourceTree = "<group>"; };
+		E44DB3882BE437B900A72295 /* PotentialHazardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotentialHazardViewModel.swift; sourceTree = "<group>"; };
 		E44DB38A2BE4386E00A72295 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E44DB38C2BE4392F00A72295 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileViewModel.swift; sourceTree = "<group>"; };
@@ -245,6 +257,7 @@
 				E44DB38E2BE43BA300A72295 /* CurrentUserProfileViewModel.swift */,
 				E44DB37E2BE41B8B00A72295 /* LoginViewModel.swift */,
 				E4083E892BE93F87004CEBE9 /* DailyReportViewModel.swift */,
+				E44DB3882BE437B900A72295 /* PotentialHazardViewModel.swift */,
 				E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */,
 				E44DB3802BE41C1700A72295 /* RegistrationViewModel.swift */,
 			);
@@ -256,13 +269,16 @@
 			children = (
 				E4083E832BE93A9E004CEBE9 /* DailyReportCell.swift */,
 				E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */,
+				E4083E8B2BE98859004CEBE9 /* DailyReportView.swift */,
 				E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */,
 				E4083E792BE926BA004CEBE9 /* FeedCellView.swift */,
 				E4083E7D2BE92ADC004CEBE9 /* FeedView.swift */,
 				E44DB3822BE4356E00A72295 /* MainTabView.swift */,
+				E4083E912BE9914D004CEBE9 /* HazardDetailView.swift */,
+				E4083E8F2BE98DBA004CEBE9 /* InsiteSafetyView.swift */,
+				E4083E952BEA90B8004CEBE9 /* PotentialHazardView.swift */,
 				E44DB3862BE4363A00A72295 /* ProjectSetup.swift */,
 				E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */,
-				E44DB3882BE437B900A72295 /* SafetyView.swift */,
 				E44DB38A2BE4386E00A72295 /* UserProfileView.swift */,
 			);
 			path = Views;
@@ -292,6 +308,8 @@
 				E44DB3632BE3FB0200A72295 /* DailySiteModel.swift */,
 				E44DB3652BE3FB7700A72295 /* ProjectModel.swift */,
 				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
+				E4083E8D2BE98CEB004CEBE9 /* SafetyModel.swift */,
+				E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,8 +496,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4083E7C2BE928F3004CEBE9 /* DevelopPreview.swift in Sources */,
+				E4083E962BEA90B8004CEBE9 /* PotentialHazardView.swift in Sources */,
 				E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */,
 				E44DB3702BE3FFB300A72295 /* AnimationButton.swift in Sources */,
+				E4083E922BE9914D004CEBE9 /* HazardDetailView.swift in Sources */,
 				E44DB3642BE3FB0200A72295 /* DailySiteModel.swift in Sources */,
 				E44DB35F2BE3FA3900A72295 /* TextFrameViewModifier.swift in Sources */,
 				E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */,
@@ -487,6 +507,7 @@
 				E4083E7A2BE926BA004CEBE9 /* FeedCellView.swift in Sources */,
 				E4083E862BE93C0D004CEBE9 /* DailyReportCard.swift in Sources */,
 				E44DB36A2BE3FD3200A72295 /* CustomTextFieldButton.swift in Sources */,
+				E4083E8C2BE98859004CEBE9 /* DailyReportView.swift in Sources */,
 				E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */,
 				E44DB3812BE41C1700A72295 /* RegistrationViewModel.swift in Sources */,
 				E44DB38F2BE43BA300A72295 /* CurrentUserProfileViewModel.swift in Sources */,
@@ -505,10 +526,13 @@
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
 				E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */,
 				E44DB3762BE4013500A72295 /* UserService.swift in Sources */,
-				E44DB3892BE437B900A72295 /* SafetyView.swift in Sources */,
+				E44DB3892BE437B900A72295 /* PotentialHazardViewModel.swift in Sources */,
 				E44DB3122BE3E34900A72295 /* DailyReport_V1App.swift in Sources */,
 				E4083E882BE93F01004CEBE9 /* DailyReportSetUp.swift in Sources */,
+				E4083E902BE98DBA004CEBE9 /* InsiteSafetyView.swift in Sources */,
+				E4083E942BEA8BEA004CEBE9 /* PotentialHazardModel.swift in Sources */,
 				E4083E7E2BE92ADC004CEBE9 /* FeedView.swift in Sources */,
+				E4083E8E2BE98CEB004CEBE9 /* SafetyModel.swift in Sources */,
 				E44DB3682BE3FC0700A72295 /* CircularProfileImageView.swift in Sources */,
 				E4083E842BE93A9E004CEBE9 /* DailyReportCell.swift in Sources */,
 				E4083E802BE92BE3004CEBE9 /* ProjectDetailCell.swift in Sources */,

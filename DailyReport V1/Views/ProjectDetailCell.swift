@@ -12,6 +12,7 @@ import Kingfisher
 struct ProjectDetailCell: View {
     @State var projects: ProjectModel
     @Environment(\.dismiss) var dismiss
+    @State var showSummary: Bool = false
     
     
     var body: some View {
@@ -42,36 +43,23 @@ struct ProjectDetailCell: View {
                         VStack(alignment: .leading, spacing: 5) {
                             
                             NavigationLink(destination: {
-                                // MARK: Add summary for Daily Report Summary
-                            }, label: {
-                                ProjectMenuRow(title: "Daily Report Summary", leftIcon: "target")
-                                
-                            })
-                            .padding(.vertical, 5)
-                            
-                            NavigationLink(destination: {
                                 // MARK: Add create Daily Report
                                 DailyReportSetUp(viewmodel: DailyReportViewModel(projects: projects), siteActivity: "Testing Sheet", materialDelivered: "27 cyds Cement", delayEncountered: "No delays encountered", equipmentWeatherDelayEncountered: "None", conversation: "Conversation with GC")
                             }, label: {
                                 ProjectMenuRow(title: "Create Daily Report", leftIcon: "rectangle.inset.filled.and.person.filled")
                             })
-                            
-                            NavigationLink(destination: {
-                                // MARK: Add summary for Safety Report Here
-                            }, label: {
-                                ProjectMenuRow(title: "Safety Summary", leftIcon: "cross.fill")
-                            })
-                            
-                            NavigationLink(destination: {
-                                // MARK: Add create Safety Report Here
-                            }, label: {
-                                ProjectMenuRow(title: "Create Safety Report", leftIcon: "cross.case.fill")
-                            })
-                            
+                            .padding(.horizontal, 20)
                         }
                     }
                     
                 }
+                
+                .sheet(isPresented: $showSummary, content: {
+                    DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
+                })
+//                .fullScreenCover(isPresented: $showSummary, content: {
+//                    DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
+                
             }
             .navigationBarBackButtonHidden(true)
             .toolbar {
@@ -84,6 +72,17 @@ struct ProjectDetailCell: View {
                             .font(.system(size: 28))
                     })
                 })
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showSummary.toggle()
+                    }, label: {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(Color.black).opacity(1)
+                            .font(.system(size: 28, design: .rounded))
+                    })
+                }
+                
             }
             .ignoresSafeArea(.all, edges: .top)
         }

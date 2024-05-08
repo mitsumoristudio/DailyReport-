@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct FeedView: View {
-    @ObservedObject var viewModel = ProjectViewModel()
+ //   @ObservedObject var viewModel = ProjectViewModel()
+    @EnvironmentObject var viewModel : ProjectViewModel
     
     var body: some View {
         NavigationStack {

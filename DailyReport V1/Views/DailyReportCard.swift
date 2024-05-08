@@ -13,6 +13,7 @@ struct DailyReportCard: View {
     @State var dailyreports: DailySiteModel
     @Environment(\.dismiss) var dismiss
     @State var backgroundGradient =  AngularGradient(gradient: Gradient(colors:[Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1))]), center: .center, angle: .degrees(70))
+    @StateObject var dailyViewModel : DailyReportViewModel
     
     var body: some View {
         NavigationStack {
@@ -85,7 +86,7 @@ struct DailyReportCard: View {
                         }
                     }
                     .padding()
-                    
+                }
                 }
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
@@ -98,8 +99,16 @@ struct DailyReportCard: View {
                                 .font(.system(size: 25))
                         }
                     }
-                }
-            }
+//                    ToolbarItem(placement: .topBarTrailing) {
+//                        Button(action: {
+//                            dailyViewModel.deleteDailyReport()
+//                        }, label: {
+//                            Image(systemName: "trash.circle.fill")
+//                                .font(.title)
+//                                .foregroundStyle(Color.black)
+//                        })
+                    }
+
         }
     }
 }
@@ -107,7 +116,7 @@ struct DailyReportCard: View {
 
 struct DailyReportCard_Preview: PreviewProvider {
     static var previews: some View {
-        DailyReportCard(dailyreports: devPreview.mockDaily)
+        DailyReportCard(dailyreports: devPreview.mockDaily, dailyViewModel: DailyReportViewModel(projects: devPreview.mockProjects))
     //    DailyReportCard(dailyreports: devPreview.mockFetchDaily)
     }
 }

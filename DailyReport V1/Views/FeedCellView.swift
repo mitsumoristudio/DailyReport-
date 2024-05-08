@@ -22,13 +22,16 @@ struct FeedCellView: View {
                     .frame(width: 400, height: 320)
                     .cornerRadius(5)
                     .shadow(radius: 5)
+                
             } else {
+                
                 Image("DailyReportLogo")
                     .resizable()
                     .scaledToFill()
                     .padding(.vertical, 10)
                     .frame(width: 400, height: 320)
             }
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text(projects.projectName)
                     .font(.title3)
@@ -43,6 +46,22 @@ struct FeedCellView: View {
                     .padding(.bottom, 0)
             }
             .padding(.horizontal, 10)
+            
+            HStack(spacing: 5) {
+                NavigationLink(destination: {
+                    // MARK: Add summary for Safety Report Here
+                }, label: {
+                    ProjectMenuRow(title: "Safety Summary", leftIcon: "cross.fill")
+                })
+                
+                NavigationLink(destination: {
+                    // MARK: Add create Safety Report Here
+                    PotentialHazardView()
+                }, label: {
+                    ProjectMenuRow(title: "Create Safety Report", leftIcon: "cross.case.fill")
+                })
+            }
+            .padding(.horizontal, 20)
         }
     }
 }

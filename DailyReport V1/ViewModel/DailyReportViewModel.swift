@@ -8,10 +8,13 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import SwiftUI
 
 
 final class DailyReportViewModel: ObservableObject {
     @Published var dailyVM = [DailySiteModel]()
+    
+    
     var projects: ProjectModel
     
     init(projects: ProjectModel) {
@@ -20,20 +23,52 @@ final class DailyReportViewModel: ObservableObject {
         fetchDailyReport()
     }
     
-    func createDailyReport(reportDate: Date, siteActivity: String, materialDelivered: String, delaysEncountered: String, image: UIImage?, conversation: String, weatherequipmentdelay: String) {
+    func createDailyReport(reportDate: Date, siteActivity: String, materialDelivered: String, delaysEncountered: String, image: UIImage?, conversation: String, weatherequipmentdelay: String)   {
         guard let user = Auth.auth().currentUser else { return }
         guard let projectID = projects.id else {return}
         guard let image = image else { return }
-        
+        let document = COLLECTION_PROJECTS.document(projectID).collection("dailyReport").document()
+        let documentID = document.documentID
+                  
         ProjectImageUpload.uploadImage(image: image, type: .dailyReport) { imageUrl in
-            let storedData : [String: Any] = ["reportDate": reportDate, "siteActivity": siteActivity, "materialDelivered": materialDelivered, "delaysEncountered" : delaysEncountered, "ownerUid": user.uid, "imageUrlString": imageUrl, "conversation": conversation, "weatherequipmentdelay": weatherequipmentdelay]
+            let storedData : [String: Any] = ["reportDate": reportDate, "siteActivity": siteActivity, "materialDelivered": materialDelivered, "delaysEncountered" : delaysEncountered, "ownerUid": user.uid, "imageUrlString": imageUrl, "conversation": conversation, "weatherequipmentdelay": weatherequipmentdelay, "documentID" : documentID]
             
-            COLLECTION_PROJECTS.document(projectID).collection("dailyReport").addDocument(data: storedData)
+            document.setData(storedData)
+            
+           // COLLECTION_PROJECTS.document(projectID).collection("dailyReport").addDocument(data: storedData)
             //  Firestore.firestore().collection("dailyReport").addDocument(data: storedData)
             
             print("Successfully upload Daily Report")
         }
     }
+    
+    func deleteDailyReport(reportID: String) {
+        guard let projectID = projects.id else { return }
+        
+        COLLECTION_PROJECTS.document(projectID).collection("dailyReport").document(reportID).delete()
+        
+        print("Deleted document")
+        
+        fetchDailyReport()
+    }
+    
+    func deleteReport(reports: DailySiteModel) {
+        
+        guard let projectID = projects.id else { return }
+        
+        let index = dailyVM.first(where: { currentPost in
+            return currentPost.id == reports.id
+        })
+        
+        
+        COLLECTION_PROJECTS.document(projectID).collection("dailyReport").document().delete()
+        
+//        withAnimation {
+//            dailyVM.remove(at: index)
+//        }
+        
+    }
+    
     
     func fetchDailyReport() {
         guard let projectID = projects.id else { return }
