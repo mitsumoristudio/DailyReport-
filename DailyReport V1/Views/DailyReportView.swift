@@ -19,12 +19,19 @@ struct DailyReportView: View {
             VStack() {
                 List {
                     ForEach(viewmodel.dailyVM, id: \.self) { items in
-                        Text(items.siteActivity)
+                     //   Text(items.siteActivity)
+                        NavigationLink(destination: {
+                            DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects))
+                        }, label: {
+                            DailyReportCell(dailyReport: items)
+                        })
+                        
                         
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
+                                    // MARK: set as documentID to deletelist
                                     viewmodel.deleteDailyReport(reportID: items.documentID ?? "")
-                                  //  viewmodel.deleteDailyReport(reportID: items.documentID ?? "")
+                                
                                 } label: {
                                     Image(systemName: "trash")
                                 }

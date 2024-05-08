@@ -49,25 +49,12 @@ final class DailyReportViewModel: ObservableObject {
         
         print("Deleted document")
         
+        // add fetch Document to retrieve the document ID
+        
         fetchDailyReport()
     }
     
-    func deleteReport(reports: DailySiteModel) {
-        
-        guard let projectID = projects.id else { return }
-        
-        let index = dailyVM.first(where: { currentPost in
-            return currentPost.id == reports.id
-        })
-        
-        
-        COLLECTION_PROJECTS.document(projectID).collection("dailyReport").document().delete()
-        
-//        withAnimation {
-//            dailyVM.remove(at: index)
-//        }
-        
-    }
+ 
     
     
     func fetchDailyReport() {
@@ -88,8 +75,9 @@ final class DailyReportViewModel: ObservableObject {
                 let uid = data["uid"] as? String ?? ""
                 let conversation = data["conversation"] as? String ?? ""
                 let weatherequipmentdelay = data["weatherequipmentdelay"] as? String ?? ""
+                let documentID = data["documentID"] as? String ?? ""
                 
-                return DailySiteModel(uid: uid, reportDate: date, siteActivity: siteActivity, materialDelivered: materialDelivered, delayEncountered: delaysEncountered, weatherequipmentdelay: weatherequipmentdelay, ownerUid: ownerUid, imageUrlString: imageUrlString, conversation: conversation)
+                return DailySiteModel(uid: uid, reportDate: date, siteActivity: siteActivity, materialDelivered: materialDelivered, delayEncountered: delaysEncountered, weatherequipmentdelay: weatherequipmentdelay, ownerUid: ownerUid, imageUrlString: imageUrlString, conversation: conversation, documentID: documentID)
 
             })
         }
