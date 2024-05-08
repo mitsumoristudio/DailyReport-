@@ -56,6 +56,7 @@ struct FeedCellView: View {
                 
                 NavigationLink(destination: {
                     // MARK: Add create Safety Report Here
+              //      SafetyListView()
                     PotentialHazardView()
                 }, label: {
                     ProjectMenuRow(title: "Create Safety Report", leftIcon: "cross.case.fill")

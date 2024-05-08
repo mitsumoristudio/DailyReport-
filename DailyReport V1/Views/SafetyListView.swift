@@ -1,19 +1,19 @@
 //
-//  PotentialHazardView.swift
+//  SafetyListView.swift
 //  DailyReport V1
 //
-//  Created by Satoshi Mitsumori on 5/7/24.
+//  Created by Satoshi Mitsumori on 5/8/24.
 //
 
 import Foundation
 import SwiftUI
 
-struct PotentialHazardView: View {
+struct SafetyListView: View {
     @State var isCompleted: Bool = false
     @Environment(\.dismiss) var dismiss
     @State var dateSelect: Date = Date()
     @State var safetyTopic: SafetyTopicEnum = .NA
-    
+ 
     private func buttonlabel(withButton placeHolder: String) -> some View {
         Text(placeHolder)
             .font(.subheadline)
@@ -46,7 +46,8 @@ struct PotentialHazardView: View {
             .foregroundColor(color)
             .fontWeight(.semibold)
     }
-
+    
+    
     var body: some View {
         NavigationStack {
             
@@ -99,12 +100,10 @@ struct PotentialHazardView: View {
                     }
                     .padding(.horizontal, 20)
                     
-                    
-                    List {
-                        ForEach(hazardCollections.sorted(by: { $0.potentialHazards < $1.potentialHazards }), id: \.self) { items in
-                        checkboxmainrow(placeholder: items)}
+                    Group {
+                        // MARK: add checklist View here
+                        ChecklistView()
                     }
-                    
                     VStack(alignment: .center, spacing: 5) {
                         HStack(spacing: 5) {
                             Button(action: {
@@ -141,82 +140,11 @@ struct PotentialHazardView: View {
             })
         }
     }
-}
+        
+    }
 
-struct PotentialHazardView_Preview: PreviewProvider {
+struct SafetyListView_Preview: PreviewProvider {
     static var previews: some View {
-        PotentialHazardView()
+        SafetyListView()
     }
 }
-
-struct CheckboxView: View {
-    
-    @Binding var checked_mark: Bool
-    @Binding var trimVal: CGFloat
-    @State var showAnimationToggle = false
-    
-    var animatableData: CGFloat {
-        get {trimVal}
-        set {trimVal = newValue }
-    }
-    
-    var body: some View {
-        ZStack {
-            
-            RoundedRectangle(cornerRadius: 10)
-                .trim(from: 0, to: trimVal)
-                .stroke(style: StrokeStyle(lineWidth: 2))
-                .frame(width: 40, height: 40)
-                .foregroundColor(checked_mark ? Color.green : Color.gray.opacity(0.3))
-                .shadow(radius: 5)
-                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 1.0), value: showAnimationToggle)
-            
-            RoundedRectangle(cornerRadius: 10)
-                .trim(from: 0, to: 1)
-                .fill(checked_mark ? Color.green : Color.gray.opacity(0.2))
-                .animation(.spring(response: 0.2, dampingFraction: 0.2), value: showAnimationToggle)
-                .frame(width: 50, height: 50)
-                .shadow(radius: 5)
-            
-            if checked_mark {
-                Image(systemName: "checkmark")
-            }
-        }
-    }
-}
-
-struct Buttonbox: View {
-    @State var check_mark = false
-    @State var trimVal: CGFloat = 0
-    
-    
-    var body: some View {
-        Button {
-            if !self.check_mark {
-                withAnimation(Animation.easeIn(duration: 0.3)) {
-                    self.trimVal = 1
-                    self.check_mark.toggle()
-                }
-            } else {
-                withAnimation {
-                    self.trimVal = 0
-                    self.check_mark.toggle()
-                }
-            }
-        } label: {
-            CheckboxView(checked_mark: $check_mark, trimVal: $trimVal)
-        }
-    }
-}
-
-extension Date {
-    
-    func toString(_ format: String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: self)
-    }
-}
-
-
-
