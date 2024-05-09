@@ -171,8 +171,7 @@ struct ProjectSetup: View {
                                 .padding()
                             }
                         }
-                        .padding(.horizontal, 20
-                        )
+                        .padding(.horizontal, 20)
                         .alert("Notification", isPresented: $showAlertIcon, actions: {
                             Text("Project Is Now Saved")
                         })

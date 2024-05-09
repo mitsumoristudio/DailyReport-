@@ -17,7 +17,7 @@ enum SafetyTopicEnum: String, CaseIterable {
     case equipmentMaterialDelivery
     case loadingUnloadingEquipment
     case movingMobileHeavyEquipment
-    case communivationwithEquipment
+    case communicationwithEquipment
     case workingwithyourHands
     case visitingJobsite
     case airMonitoring
@@ -59,7 +59,7 @@ enum SafetyTopicEnum: String, CaseIterable {
             return "Loading & Unloading Equipment"
         case .movingMobileHeavyEquipment:
             return "Moving Mobile Heavy Equipment"
-        case .communivationwithEquipment:
+        case .communicationwithEquipment:
             return "Communication with Equipment Operator"
         case .workingwithyourHands:
             return "Working with your hands"

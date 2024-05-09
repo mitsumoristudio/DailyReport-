@@ -10,7 +10,7 @@ import Firebase
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct DailySafetyModel: Identifiable, Codable {
+struct DailySafetyModel: Identifiable, Codable, Hashable {
     @DocumentID var id: String?
     
     var selectedSafetyTopic: String
@@ -41,5 +41,6 @@ struct DailySafetyModel: Identifiable, Codable {
     var vehicleSafety : String
     var vibration: String 
     var ownerUid: String?
+    var documentID: String?
     
 }

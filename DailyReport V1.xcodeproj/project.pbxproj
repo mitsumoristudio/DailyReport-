@@ -26,6 +26,9 @@
 		E4083EEA2BEBF5B5004CEBE9 /* SafetyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */; };
 		E4083EEC2BEC0ECC004CEBE9 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EEB2BEC0ECC004CEBE9 /* ChecklistView.swift */; };
 		E4083EEE2BEC1B65004CEBE9 /* DailySafetyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */; };
+		E4083EF02BEC4BD1004CEBE9 /* SafetyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */; };
+		E4083EF22BEC4C85004CEBE9 /* SafetyListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */; };
+		E4083EF42BEC4DBB004CEBE9 /* InspectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */; };
 		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
 		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
 		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
@@ -109,6 +112,9 @@
 		E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListView.swift; sourceTree = "<group>"; };
 		E4083EEB2BEC0ECC004CEBE9 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySafetyModel.swift; sourceTree = "<group>"; };
+		E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListCell.swift; sourceTree = "<group>"; };
+		E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListCard.swift; sourceTree = "<group>"; };
+		E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionListView.swift; sourceTree = "<group>"; };
 		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
 		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -285,8 +291,11 @@
 				E44DB3822BE4356E00A72295 /* MainTabView.swift */,
 				E4083E912BE9914D004CEBE9 /* HazardDetailView.swift */,
 				E4083E8F2BE98DBA004CEBE9 /* InsiteSafetyView.swift */,
+				E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */,
 				E4083E952BEA90B8004CEBE9 /* PotentialHazardView.swift */,
 				E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */,
+				E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */,
+				E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */,
 				E44DB3862BE4363A00A72295 /* ProjectSetup.swift */,
 				E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */,
 				E44DB38A2BE4386E00A72295 /* UserProfileView.swift */,
@@ -516,8 +525,10 @@
 				E44DB35F2BE3FA3900A72295 /* TextFrameViewModifier.swift in Sources */,
 				E44DB3872BE4363A00A72295 /* ProjectSetup.swift in Sources */,
 				E44DB37D2BE4180100A72295 /* ResetPasswordView.swift in Sources */,
+				E4083EF42BEC4DBB004CEBE9 /* InspectionListView.swift in Sources */,
 				E4083E7A2BE926BA004CEBE9 /* FeedCellView.swift in Sources */,
 				E4083E862BE93C0D004CEBE9 /* DailyReportCard.swift in Sources */,
+				E4083EF22BEC4C85004CEBE9 /* SafetyListCard.swift in Sources */,
 				E44DB36A2BE3FD3200A72295 /* CustomTextFieldButton.swift in Sources */,
 				E4083E8C2BE98859004CEBE9 /* DailyReportView.swift in Sources */,
 				E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */,
@@ -529,6 +540,7 @@
 				E44DB35D2BE3F9F300A72295 /* VisualEffectBlur.swift in Sources */,
 				E4083EEA2BEBF5B5004CEBE9 /* SafetyListView.swift in Sources */,
 				E44DB3142BE3E34900A72295 /* ContentView.swift in Sources */,
+				E4083EF02BEC4BD1004CEBE9 /* SafetyListCell.swift in Sources */,
 				E44DB3722BE400C200A72295 /* Constants.swift in Sources */,
 				E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */,
 				E4083EEC2BEC0ECC004CEBE9 /* ChecklistView.swift in Sources */,

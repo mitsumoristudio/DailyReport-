@@ -25,6 +25,7 @@ struct ChecklistView: View {
     @State var excavation: String = "N/A"
     @State var grinding: String = "N/A"
     @State var groutBurn: String = "N/A"
+    @State var coldStress : String = "N/A"
     @State var heatColdStress: String = "N/A"
     @State var heavyEquipment: String = "N/A"
     @State var hotWork: String = "N/A"
@@ -209,7 +210,7 @@ struct ChecklistView: View {
                             .fontWeight(.semibold)
                             .font(.subheadline)
                         
-                        Picker("", selection: $groutBurn) {
+                        Picker("", selection: $coldStress) {
                             ForEach(yesnoArray, id: \.self) { items in
                                 Text(items)
                             }

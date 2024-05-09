@@ -122,6 +122,7 @@ struct PotentialHazardView: View {
                 }
             
             
+            
             .navigationTitle("Potential Hazards")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
