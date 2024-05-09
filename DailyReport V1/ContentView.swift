@@ -11,6 +11,7 @@ struct ContentView: View {
     @AppStorage("log_Status") var log_Status: Bool = true
     @StateObject var viewModel = ContentViewModel()
     
+    
     var body: some View {
 //        Group {
 //            if viewModel.userSession != nil {

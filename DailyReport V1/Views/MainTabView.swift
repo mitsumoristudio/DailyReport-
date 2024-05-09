@@ -12,6 +12,7 @@ struct MainTabView: View {
     @State var selectedTab = 0
     @State private var showCreateTabview: Bool = false
     @State var devpreview = DevelopPreview()
+    @State var isOnboarding: Bool = false
     
     var body: some View {
         VStack() {
@@ -52,13 +53,27 @@ struct MainTabView: View {
                         }
                     }
             }
+           
+            
+            
             .onChange(of: selectedTab) { oldValue, newValue in
                 showCreateTabview = selectedTab == 1
             }
             .sheet(isPresented: $showCreateTabview, content: {
                 ProjectSetup()
             })
+            
         }
+        // MARK: add the onboarding as a toggle button
+        .onAppear {
+            isOnboarding.toggle()
+        }
+        
+        .sheet(isPresented: $isOnboarding, content: {
+            OnboardingView(isOnboarding: $isOnboarding)
+        })
+        // add this as overlay Onboarding
+     
         
     }
 }

@@ -32,6 +32,9 @@
 		E4083F302BED2C95004CEBE9 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */; };
 		E4083F322BED2D61004CEBE9 /* SafetyPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F312BED2D61004CEBE9 /* SafetyPDF.swift */; };
 		E4083F342BED39B2004CEBE9 /* DailyReportPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F332BED39B2004CEBE9 /* DailyReportPDF.swift */; };
+		E4083F722BED50D7004CEBE9 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F712BED50D7004CEBE9 /* OnboardingModel.swift */; };
+		E4083F742BED5668004CEBE9 /* OffsetPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F732BED5668004CEBE9 /* OffsetPageTabView.swift */; };
+		E4083F762BED56E2004CEBE9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F752BED56E2004CEBE9 /* OnboardingView.swift */; };
 		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
 		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
 		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
@@ -121,6 +124,9 @@
 		E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		E4083F312BED2D61004CEBE9 /* SafetyPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPDF.swift; sourceTree = "<group>"; };
 		E4083F332BED39B2004CEBE9 /* DailyReportPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportPDF.swift; sourceTree = "<group>"; };
+		E4083F712BED50D7004CEBE9 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		E4083F732BED5668004CEBE9 /* OffsetPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetPageTabView.swift; sourceTree = "<group>"; };
+		E4083F752BED56E2004CEBE9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
 		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 				E4083E912BE9914D004CEBE9 /* HazardDetailView.swift */,
 				E4083E8F2BE98DBA004CEBE9 /* InsiteSafetyView.swift */,
 				E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */,
+				E4083F752BED56E2004CEBE9 /* OnboardingView.swift */,
 				E4083E952BEA90B8004CEBE9 /* PotentialHazardView.swift */,
 				E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */,
 				E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */,
@@ -318,6 +325,7 @@
 				E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */,
 				E44DB3752BE4013500A72295 /* UserService.swift */,
 				E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */,
+				E4083F732BED5668004CEBE9 /* OffsetPageTabView.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -334,12 +342,13 @@
 			isa = PBXGroup;
 			children = (
 				E44DB3632BE3FB0200A72295 /* DailySiteModel.swift */,
-				E4083EE72BEBE284004CEBE9 /* SafetyTopicEnum.swift */,
-				E44DB3652BE3FB7700A72295 /* ProjectModel.swift */,
-				E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */,
-				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
 				E4083EED2BEC1B65004CEBE9 /* DailySafetyModel.swift */,
+				E4083F712BED50D7004CEBE9 /* OnboardingModel.swift */,
+				E4083E932BEA8BEA004CEBE9 /* PotentialHazardModel.swift */,
+				E44DB3652BE3FB7700A72295 /* ProjectModel.swift */,
+				E4083EE72BEBE284004CEBE9 /* SafetyTopicEnum.swift */,
 				E4083E8D2BE98CEB004CEBE9 /* SafetyModel.swift */,
+				E44DB3612BE3FAA000A72295 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,11 +558,13 @@
 				E44DB35D2BE3F9F300A72295 /* VisualEffectBlur.swift in Sources */,
 				E4083EEA2BEBF5B5004CEBE9 /* SafetyListView.swift in Sources */,
 				E44DB3142BE3E34900A72295 /* ContentView.swift in Sources */,
+				E4083F742BED5668004CEBE9 /* OffsetPageTabView.swift in Sources */,
 				E4083EF02BEC4BD1004CEBE9 /* SafetyListCell.swift in Sources */,
 				E44DB3722BE400C200A72295 /* Constants.swift in Sources */,
 				E44DB3832BE4356E00A72295 /* MainTabView.swift in Sources */,
 				E4083EEC2BEC0ECC004CEBE9 /* ChecklistView.swift in Sources */,
 				E4083E822BE931FC004CEBE9 /* GradientIconButton.swift in Sources */,
+				E4083F762BED56E2004CEBE9 /* OnboardingView.swift in Sources */,
 				E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */,
 				E44DB36E2BE3FEEA00A72295 /* ProjectMenuRow.swift in Sources */,
 				E4083F302BED2C95004CEBE9 /* ShareSheet.swift in Sources */,
@@ -561,6 +572,7 @@
 				E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */,
 				E44DB3622BE3FAA000A72295 /* UserModel.swift in Sources */,
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
+				E4083F722BED50D7004CEBE9 /* OnboardingModel.swift in Sources */,
 				E4083E8A2BE93F87004CEBE9 /* DailyReportViewModel.swift in Sources */,
 				E44DB3762BE4013500A72295 /* UserService.swift in Sources */,
 				E4083EEE2BEC1B65004CEBE9 /* DailySafetyModel.swift in Sources */,
