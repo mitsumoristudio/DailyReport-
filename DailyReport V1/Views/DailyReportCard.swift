@@ -14,6 +14,7 @@ struct DailyReportCard: View {
     @Environment(\.dismiss) var dismiss
     @State var backgroundGradient =  AngularGradient(gradient: Gradient(colors:[Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1))]), center: .center, angle: .degrees(70))
     @StateObject var dailyViewModel : DailyReportViewModel
+    @State var projects: ProjectModel
     
     var body: some View {
         NavigationStack {
@@ -26,26 +27,45 @@ struct DailyReportCard: View {
                             KFImage(URL(string: imageUrlString))
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 150)
+                                .frame(width: 180, height: 180)
                                 .shadow(radius: 8)
-                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10), style: .continuous))
+                                .clipShape(Circle())
+                            //                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10), style: .continuous))
                                 .padding(.vertical, 10)
+                                .padding(.horizontal, 100)
                         } else {
                             Image(systemName: "questionmark.square.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 150, height: 150)
+                                .frame(width: 180, height: 180)
                                 .shadow(radius: 8)
+                                .clipShape(Circle())
                                 .padding(.vertical, 10)
+                                .padding(.horizontal, 100)
                         }
                         
                         VStack(alignment: .leading, spacing: 12) {
+                            
+                            Text(projects.projectName)
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            
+                            Text("Location \(projects.location)")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            
+                            Text("Client \(projects.clientName ?? "")")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            
                             Text("Report Date:")
                                 .font(.headline)
                                 .fontWeight(.bold)
                             
                             Text("\(dailyreports.reportDate)")
                                 .font(.subheadline)
+                            
+                            
                             
                             Text("Site Activity:")
                                 .font(.headline)
@@ -84,7 +104,10 @@ struct DailyReportCard: View {
                                 .font(.subheadline)
                             
                         }
+                        .padding()
+                        
                     }
+                    
                     .padding()
                 }
                 }
@@ -99,14 +122,6 @@ struct DailyReportCard: View {
                                 .font(.system(size: 25))
                         }
                     }
-//                    ToolbarItem(placement: .topBarTrailing) {
-//                        Button(action: {
-//                            dailyViewModel.deleteDailyReport()
-//                        }, label: {
-//                            Image(systemName: "trash.circle.fill")
-//                                .font(.title)
-//                                .foregroundStyle(Color.black)
-//                        })
                     }
 
         }
@@ -116,7 +131,7 @@ struct DailyReportCard: View {
 
 struct DailyReportCard_Preview: PreviewProvider {
     static var previews: some View {
-        DailyReportCard(dailyreports: devPreview.mockDaily, dailyViewModel: DailyReportViewModel(projects: devPreview.mockProjects))
+        DailyReportCard(dailyreports: devPreview.mockDaily, dailyViewModel: DailyReportViewModel(projects: devPreview.mockProjects), projects: devPreview.mockProjects)
     //    DailyReportCard(dailyreports: devPreview.mockFetchDaily)
     }
 }

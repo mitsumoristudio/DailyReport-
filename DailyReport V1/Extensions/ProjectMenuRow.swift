@@ -21,6 +21,8 @@ struct ProjectMenuRow: View {
             Text(title)
                 .font(.subheadline)
                 .fontWeight(.semibold)
+             
+            
             
             Spacer()
             

@@ -14,6 +14,7 @@ struct DailyReportView: View {
     @Environment(\.dismiss) var dismiss
     @State private var searchText: String = ""
     @State private var updatedTopics = [DailySiteModel]()
+    @State var projects: ProjectModel
     
     var filterReportTopics: [DailySiteModel] {
         guard !searchText.isEmpty else {
@@ -32,7 +33,7 @@ struct DailyReportView: View {
                  //   ForEach(viewmodel.dailyVM, id: \.self) { items in
                      //   Text(items.siteActivity)
                         NavigationLink(destination: {
-                            DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects))
+                            DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects), projects: projects)
                         }, label: {
                             DailyReportCell(dailyReport: items)
                         })
@@ -82,7 +83,7 @@ struct DailyReportView: View {
     
     struct DailyReportView_Preview: PreviewProvider {
         static var previews: some View {
-            DailyReportView().environmentObject(DailyReportViewModel(projects: devPreview.mockProjects))
+            DailyReportView( projects: devPreview.mockProjects).environmentObject(DailyReportViewModel(projects: devPreview.mockProjects))
         }
     }
 }

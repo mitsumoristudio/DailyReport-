@@ -60,7 +60,7 @@ struct ProjectDetailCell: View {
           
                 })
                 .sheet(isPresented: $showReportSummary, content: {
-                    DailyReportView().environmentObject(DailyReportViewModel(projects: projects))
+                    DailyReportView(projects: projects).environmentObject(DailyReportViewModel(projects: projects))
                 })
                 
             }
