@@ -13,6 +13,7 @@ struct MainTabView: View {
     @State private var showCreateTabview: Bool = false
     @State var devpreview = DevelopPreview()
     @State var isOnboarding: Bool = false
+    @StateObject var viewmodel = ContentViewModel()
     
     var body: some View {
         VStack() {
@@ -65,8 +66,14 @@ struct MainTabView: View {
             
         }
         // MARK: add the onboarding as a toggle button
+        // based on authenticating user through Firebase
         .onAppear {
-            isOnboarding.toggle()
+            if viewmodel.userSession != nil {
+                isOnboarding.toggle()
+            } else {
+                isOnboarding.toggle()
+            }
+           
         }
         
         .sheet(isPresented: $isOnboarding, content: {

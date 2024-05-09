@@ -23,8 +23,5 @@ struct ProjectModel: Identifiable, Codable {
     let ownerUid: String
     let timeStamp: Timestamp
     
-   
     var user: UserModel?
-   
-    
 }
