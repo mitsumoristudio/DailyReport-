@@ -15,11 +15,21 @@ struct InspectionListView: View {
     @State private var searchText: String = ""
     @State private var updatedTopics = [DailySafetyModel]()
     
+    var filterReports: [DailySafetyModel] {
+        guard !searchText.isEmpty else { return
+            viewmodel.potentialviewModel.sorted { $0.reportDate < $1.reportDate }
+        }
+        return viewmodel.potentialviewModel.filter { search in
+            search.reportDate.localizedCaseInsensitiveContains(searchText)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 5) {
                 List {
-                    ForEach(viewmodel.potentialviewModel, id: \.self) { items in
+                    ForEach(filterReports, id: \.self) { items in
+              //      ForEach(viewmodel.potentialviewModel, id: \.self) { items in
                         
                         NavigationLink(destination: {
                             SafetyListCard(safeyModel: items)
@@ -30,6 +40,7 @@ struct InspectionListView: View {
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
                                 // MARK: set as documentID to deletelist
+                                viewmodel.deleteSafetyReport(reportID: items.documentID ?? "")
                                
                             
                             } label: {
@@ -43,6 +54,14 @@ struct InspectionListView: View {
                 }
                 
             }
+            .searchable(text: $searchText, prompt: "Search Safety Info")
+            .onChange(of: searchText, { searchText, _ in
+                updatedTopics = viewmodel.potentialviewModel.filter( {
+                    reports in reports.reportDate.contains(searchText)
+                })
+            })
+            
+            
             .navigationTitle("Safety List")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)

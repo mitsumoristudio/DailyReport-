@@ -31,10 +31,19 @@ final class PotentialHazardViewModel: ObservableObject {
         
         let storedData : [String: Any] = ["selectedSafetyTopic": selectedSafetyTopic, "reportDate": reportDate, "bodyPosition": bodyPosition, "boomSwing": boomSwing, "chemicalExposure": chemicalExposure, "confinedSpace": confinedSpace, "congestedArea": congestedArea, "craneRadius": craneRadius, "electrical": electrical, "excavation": excavation, "grinding": grinding, "groutBurn" : groutBurn, "heatColdStress": heatColdStress, "heavyEquipment": heavyEquipment, "hotWork": hotWork, "noise": noise, "pinchPoint": pinchPoint, "pressurizedLine": pressurizedLine, "rigging": rigging, "rotatingEquipment": rotatatingEquipment, "sharpEdges": sharpEdges, "silica": silica, "suspendedLoads": suspendedLoads, "slips": slips, "undergroundUtilities": undergroundUtilities, "vehicleSafety": vehicleSafety, "vibration": vibration, "documentID": documentID, "userUID": user.uid]
         
-       document.setData(storedData)
+        document.setData(storedData)
         
         print("Successfully created Safety Report")
     }
+    
+    func deleteSafetyReport(reportID: String) {
+        guard let projectID = projects.id else { return }
+        
+        COLLECTION_PROJECTS.document(projectID).collection("safetyReport").document(reportID).delete()
+        
+        fetchSafetyReport()
+    }
+    
     
     func fetchSafetyReport() {
         guard let projectID = projects.id else { return }
