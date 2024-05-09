@@ -14,6 +14,7 @@ struct InspectionListView: View {
     @Environment(\.dismiss) var dismiss
     @State private var searchText: String = ""
     @State private var updatedTopics = [DailySafetyModel]()
+    @State var projects: ProjectModel
     
     var filterReports: [DailySafetyModel] {
         guard !searchText.isEmpty else { return
@@ -32,7 +33,8 @@ struct InspectionListView: View {
               //      ForEach(viewmodel.potentialviewModel, id: \.self) { items in
                         
                         NavigationLink(destination: {
-                            SafetyListCard(safeyModel: items)
+                         //   SafetyListCard(safeyModel: items, projects: projects)
+                            SafetyPDF(dailysafetyModel: items, projects: projects)
         
                         }, label: {
                             SafetyListCell(safetyModel: items)

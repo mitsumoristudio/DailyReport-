@@ -33,7 +33,11 @@ struct DailyReportView: View {
                  //   ForEach(viewmodel.dailyVM, id: \.self) { items in
                      //   Text(items.siteActivity)
                         NavigationLink(destination: {
-                            DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects), projects: projects)
+                            // MARK: Add PDF formatter
+                            DailyReportPDF(dailyReport: items, projects: projects, dailyVM: DailyReportViewModel(projects: projects))
+                            
+                            // MARK: Daily Report Card without PDF formatter
+//                            DailyReportCard(dailyreports: items, dailyViewModel: DailyReportViewModel(projects: DevelopPreview.shared.mockProjects), projects: projects)
                         }, label: {
                             DailyReportCell(dailyReport: items)
                         })

@@ -13,7 +13,7 @@ struct SafetyListCell: View {
     
     var body: some View {
         VStack( spacing: 10) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text("Report Date: \(safetyModel.reportDate)")
                     .font(.headline)
                     .fontWeight(.semibold)

@@ -50,7 +50,7 @@ struct FeedCellView: View {
             HStack(spacing: 5) {
                 NavigationLink(destination: {
                     // MARK: Add summary for Safety Report Here
-                    InspectionListView().environmentObject(PotentialHazardViewModel(projects: projects))
+                    InspectionListView( projects: projects).environmentObject(PotentialHazardViewModel(projects: projects))
                     
                 }, label: {
                     ProjectMenuRow(title: "Safety Summary", leftIcon: "cross.fill")

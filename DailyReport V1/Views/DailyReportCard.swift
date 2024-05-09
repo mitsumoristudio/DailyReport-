@@ -12,16 +12,16 @@ import Kingfisher
 struct DailyReportCard: View {
     @State var dailyreports: DailySiteModel
     @Environment(\.dismiss) var dismiss
-    @State var backgroundGradient =  AngularGradient(gradient: Gradient(colors:[Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1))]), center: .center, angle: .degrees(70))
+    @State var backgroundGradient =  AngularGradient(gradient: Gradient(colors:[Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.7540688515, green: 0.7540867925, blue: 0.7540771365, alpha: 1))]), center: .center, angle: .degrees(70))
     @StateObject var dailyViewModel : DailyReportViewModel
     @State var projects: ProjectModel
     
     var body: some View {
-        NavigationStack {
+    //    NavigationStack {
             ZStack {
                 backgroundGradient
                     .ignoresSafeArea()
-                ScrollView {
+         //       ScrollView {
                     LazyVStack(alignment: .leading, spacing: 5) {
                         if let imageUrlString = dailyreports.imageUrlString {
                             KFImage(URL(string: imageUrlString))
@@ -45,88 +45,135 @@ struct DailyReportCard: View {
                         }
                         
                         VStack(alignment: .leading, spacing: 12) {
+                            LabeledContent {
+                                Text(projects.projectName)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Project: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text(projects.projectName)
-                                .font(.headline)
-                                .fontWeight(.bold)
+                            LabeledContent {
+                                Text(projects.location)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Location: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text("Location \(projects.location)")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
+                            LabeledContent {
+                                Text(projects.clientName ?? "")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Client: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text("Client \(projects.clientName ?? "")")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
+                            LabeledContent {
+                                Text(dailyreports.reportDate)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Report Date: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text("Report Date:")
-                                .font(.headline)
-                                .fontWeight(.bold)
+                            LabeledContent {
+                                Text(dailyreports.siteActivity)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Site Activity: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text("\(dailyreports.reportDate)")
-                                .font(.subheadline)
+                            LabeledContent {
+                                Text(dailyreports.delayEncountered ?? "")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Delays Encountered: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
+                            LabeledContent {
+                                Text(dailyreports.weatherequipmentdelay ?? "")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Equipment & Weather Delay Encountered: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
+                            LabeledContent {
+                                Text(dailyreports.conversation ?? "")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Conversations: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                             
-                            Text("Site Activity:")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text("\(dailyreports.siteActivity)")
-                                .font(.subheadline)
-                            
-                            Text("Delays Encountered:")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text(dailyreports.delayEncountered ?? "")
-                                .font(.subheadline)
-                            
-                            Text("Equipment & Weather Delay Encountered:")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text(dailyreports.weatherequipmentdelay ?? "")
-                                .font(.subheadline)
-                            
-                            
-                            Text("Conversations:")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text(dailyreports.conversation ?? "")
-                                .font(.subheadline)
-                            
-                            Text("Material Delivered:")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text(dailyreports.materialDelivered ?? "")
-                                .font(.subheadline)
-                            
+                            LabeledContent {
+                                Text(dailyreports.materialDelivered ?? "")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(Color.black)
+                                    .font(.subheadline)
+                                
+                            } label: {
+                                Text("Material Delivered: ")
+                                    .fontWeight(.semibold)
+                                    .font(.headline)
+                            }
                         }
                         .padding()
                         
                     }
-                    
+                
                     .padding()
-                }
-                }
-                .navigationBarBackButtonHidden(true)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            dismiss()
-                        } label: {
-                            Image(systemName: "chevron.left.circle.fill")
-                                .foregroundColor(Color.black).opacity(0.8)
-                                .font(.system(size: 25))
-                        }
-                    }
-                    }
-
-        }
+                //      }
+            }
+                        .navigationBarBackButtonHidden(true)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button {
+                                    dismiss()
+                                } label: {
+                                    Image(systemName: "chevron.left.circle.fill")
+                                        .foregroundColor(Color.black).opacity(0.8)
+                                        .font(.system(size: 25))
+                                }
+                            }
+                          }
+           }
     }
-}
 
 
 struct DailyReportCard_Preview: PreviewProvider {

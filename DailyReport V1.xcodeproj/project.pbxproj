@@ -29,6 +29,9 @@
 		E4083EF02BEC4BD1004CEBE9 /* SafetyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */; };
 		E4083EF22BEC4C85004CEBE9 /* SafetyListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */; };
 		E4083EF42BEC4DBB004CEBE9 /* InspectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */; };
+		E4083F302BED2C95004CEBE9 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */; };
+		E4083F322BED2D61004CEBE9 /* SafetyPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F312BED2D61004CEBE9 /* SafetyPDF.swift */; };
+		E4083F342BED39B2004CEBE9 /* DailyReportPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4083F332BED39B2004CEBE9 /* DailyReportPDF.swift */; };
 		E41BCEFB2BE57794002A9256 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */; };
 		E41BCEFD2BE578CD002A9256 /* ImageUploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */; };
 		E41BCEFF2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */; };
@@ -115,6 +118,9 @@
 		E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListCell.swift; sourceTree = "<group>"; };
 		E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyListCard.swift; sourceTree = "<group>"; };
 		E4083EF32BEC4DBB004CEBE9 /* InspectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionListView.swift; sourceTree = "<group>"; };
+		E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		E4083F312BED2D61004CEBE9 /* SafetyPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyPDF.swift; sourceTree = "<group>"; };
+		E4083F332BED39B2004CEBE9 /* DailyReportPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReportPDF.swift; sourceTree = "<group>"; };
 		E41BCEFA2BE57794002A9256 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderService.swift; sourceTree = "<group>"; };
 		E41BCEFE2BE57A4F002A9256 /* ThreadsTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 				E4083EEB2BEC0ECC004CEBE9 /* ChecklistView.swift */,
 				E4083E832BE93A9E004CEBE9 /* DailyReportCell.swift */,
 				E4083E852BE93C0D004CEBE9 /* DailyReportCard.swift */,
+				E4083F332BED39B2004CEBE9 /* DailyReportPDF.swift */,
 				E4083E8B2BE98859004CEBE9 /* DailyReportView.swift */,
 				E4083E872BE93F01004CEBE9 /* DailyReportSetUp.swift */,
 				E4083E792BE926BA004CEBE9 /* FeedCellView.swift */,
@@ -296,6 +303,7 @@
 				E4083EE92BEBF5B5004CEBE9 /* SafetyListView.swift */,
 				E4083EEF2BEC4BD1004CEBE9 /* SafetyListCell.swift */,
 				E4083EF12BEC4C85004CEBE9 /* SafetyListCard.swift */,
+				E4083F312BED2D61004CEBE9 /* SafetyPDF.swift */,
 				E44DB3862BE4363A00A72295 /* ProjectSetup.swift */,
 				E4083E7F2BE92BE3004CEBE9 /* ProjectDetailCell.swift */,
 				E44DB38A2BE4386E00A72295 /* UserProfileView.swift */,
@@ -309,6 +317,7 @@
 				E44DB3732BE400F800A72295 /* AuthService.swift */,
 				E41BCEFC2BE578CD002A9256 /* ImageUploaderService.swift */,
 				E44DB3752BE4013500A72295 /* UserService.swift */,
+				E4083F2F2BED2C95004CEBE9 /* ShareSheet.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -547,6 +556,8 @@
 				E4083E822BE931FC004CEBE9 /* GradientIconButton.swift in Sources */,
 				E44DB38D2BE4392F00A72295 /* ContentViewModel.swift in Sources */,
 				E44DB36E2BE3FEEA00A72295 /* ProjectMenuRow.swift in Sources */,
+				E4083F302BED2C95004CEBE9 /* ShareSheet.swift in Sources */,
+				E4083F342BED39B2004CEBE9 /* DailyReportPDF.swift in Sources */,
 				E44DB38B2BE4386E00A72295 /* UserProfileView.swift in Sources */,
 				E44DB3622BE3FAA000A72295 /* UserModel.swift in Sources */,
 				E44DB36C2BE3FEA200A72295 /* ImagePicker.swift in Sources */,
@@ -566,6 +577,7 @@
 				E4083E802BE92BE3004CEBE9 /* ProjectDetailCell.swift in Sources */,
 				E44DB3792BE417E300A72295 /* LoginView.swift in Sources */,
 				E44DB37F2BE41B8B00A72295 /* LoginViewModel.swift in Sources */,
+				E4083F322BED2D61004CEBE9 /* SafetyPDF.swift in Sources */,
 				E44DB3742BE400F800A72295 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
