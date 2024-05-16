@@ -4,9 +4,9 @@ App built to create, edit and print project daily site report and safety task an
 navigate through projects.
 
 ## App Benefits
-Create, edit and print PDF of Daily Site and Safety Reports
-Organize projects with assigned teams and location
-Determine hazardous bullet items specific to the work and jobsite
+ - Create, edit and print PDF of Daily Site and Safety Reports
+ - Organize projects with assigned teams and location
+ - Determine hazardous bullet items specific to the work and jobsite
 
 ## Technology Used
 - Swift/SwiftUI
