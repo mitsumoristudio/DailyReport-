@@ -4,15 +4,13 @@ App built to create, edit and print project daily site report and safety task an
 navigate through projects.
 
 ## App Benefits
-Get an overview of where your project retained significant delays.
-Take ownership stake of change order brought by supplier, or General Contractor, etc.
-List to simpify type of delays
-Built in countdown timer
+Create, edit and print PDF of Daily Site and Safety Reports
+Organize projects with assigned teams and location
+Determine hazardous bullet items specific to the work and jobsite
 
 ## Technology Used
 - Swift/SwiftUI
 - Xcode
-- Core Data
 - Firebase & Firebase Autentication
 
 ## App Features
