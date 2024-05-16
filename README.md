@@ -16,6 +16,6 @@ Determine hazardous bullet items specific to the work and jobsite
 ## App Features
 
 <a ><img src="https://github.com/mitsumoristudio/DailyReport-/blob/4f45b66f13588596f8e3559f0aad9f8bcc2e6490/screen2.jpg" width= "256" height = "500" /></a>
-<a ><img src="https://github.com/mitsumoristudio/ConstructionTimer-/blob/602e359cbe92fe20639d88eafdd2968de42ea356/Construction%20Timer%20ScreenShot2.jpg" width= "256" height = "500" /></a>
+<a ><img src="https://github.com/mitsumoristudio/DailyReport-/blob/e5113306420ede7f849ec246b40ae4925f021b35/screen4.jpg" width= "256" height = "500" /></a>
 <a ><img src="https://github.com/mitsumoristudio/ConstructionTimer-/blob/a420c1e57078bbe727ef55f2e532f82cf771a917/ConstructionTimer%20Screenshot3.jpg" width= "256" height = "500" /></a>
 
